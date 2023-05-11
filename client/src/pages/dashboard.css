@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    /*Color variables*/
+    --text-color: #155253;
+    --primary-color: #FFC93C;
+    --secondary-color: #ECE6D9;
+    /*Break point responsive*/
+    --mobile: 440px;
+    --computer: 1080px;
+  }
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    width: var(--mobile);
+    height: 100vh;
+    background-color: var(--secondary-color);
+  }
+  .ToiletList {
+    width: 95%;
+  }
