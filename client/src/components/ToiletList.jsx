@@ -83,7 +83,7 @@ const ToiletList = () => {
     </div>
   );
 
-
+};
 
 
 export default ToiletList;
