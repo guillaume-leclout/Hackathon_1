@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Map from '../components/Map';
-import './ToiletList.css';
+import './toiletlist.css';
 
 const ToiletList = () => {
   const [toilets, setToilets] = useState([]);

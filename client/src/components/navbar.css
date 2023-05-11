@@ -1,0 +1,9 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1em auto;
+    padding: 0.9em;
+    border-radius: 15px;
+    ;
+}

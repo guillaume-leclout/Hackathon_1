@@ -2,7 +2,7 @@ import React from 'react';
 
 const Map = ({ longitude, latitude }) => {
   return (
-    <div>
+    <div className='navbar'>
       <iframe
         src={`https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d83999.06631218531!2d${
           longitude || ''
