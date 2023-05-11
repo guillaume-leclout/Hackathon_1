@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import ToiletList from '../components/ToiletList';
 
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <div>
+      <ToiletList />
+    </div>
+  );
+};
 
-export default Dashboard
+export default Dashboard;

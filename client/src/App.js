@@ -1,11 +1,10 @@
 import './App.css';
-import ToiletList from './components/ToiletList';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
     <div className="App">
-      <ToiletList/>
-      
+      <Dashboard />
     </div>
   );
 }
