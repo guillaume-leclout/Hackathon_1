@@ -14,8 +14,8 @@ const Dashboard = () => {
       <ToiletList />
       <ToiletListFiltered/>
       </div>
-      <Footer />
       <ChuckNorris/>
+      <Footer />
     </div>
     
   );

@@ -66,7 +66,9 @@ const ToiletListFiltered = () => {
 
   return (
     <div className='filteredList'>
+      
       <h2>Choose your country : </h2>
+      <div className='countries'>
       {uniqueCountries.map((country) => (
         <div
           className='country'
@@ -77,6 +79,7 @@ const ToiletListFiltered = () => {
           {countryCodes[country]}
         </div>
       ))}
+      </div>
       {selectedCountry && (
         <h2>Filtered Toilet List for {countryCodes[selectedCountry]}:</h2>
       )}

@@ -1,7 +1,10 @@
 .chuck-norris-banner {
+    
     display: flex;
+    border-radius: 15px;
     overflow: hidden;
-    width: 100%;
+    
+    width: 90%;
   }
   
   .scrolling-text {
@@ -17,4 +20,6 @@
       transform: translateX(-100%);
     }
   }
+
+
   

@@ -4,11 +4,11 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    width: var(--mobile);
     height: 3.5em;
 
 }
 .footer-text {
-    color: var(--secondary-color);
+    color: whitesmoke;
     font-size: small;
 }
