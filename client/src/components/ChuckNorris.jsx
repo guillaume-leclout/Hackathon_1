@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import '../components/chucknorris.css';
 import axios from 'axios';
 
 const ChuckNorris = () => {
@@ -24,16 +24,16 @@ const ChuckNorris = () => {
   }, []);
 
   return (
-    <div className='jesaispas'>
-    <div className="chuck-norris-banner scrolling-text">
-
-    <h4>Here's a shit joke !! </h4>
-      <span>{joke}</span>
-    </div>
+    <div className="chuck-container">
+      <div className="jesaispas">
+        <h4 className="chuck-title">Here's a shit joke !! </h4>
+        <div className="chuck-norris-banner scrolling-text">
+          <span>{joke}</span>
+        </div>
+      </div>
     </div>
   );
 };
-
 
 
 export default ChuckNorris;

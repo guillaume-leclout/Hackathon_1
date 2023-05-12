@@ -1,14 +1,15 @@
 .navbar {
     background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    opacity: 0.9;
+
+
     width: var(--mobile);
-    height: 6em;
+    height: 10em;
 }
 
 .logo {
-    width: 20em;
-    justify-content: center;
-    align-items: center;
+    width: 28em;
+
+
 }
+

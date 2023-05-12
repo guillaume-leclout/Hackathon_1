@@ -33,7 +33,7 @@ const ToiletList = () => {
         unisex: 'false',
       };
       const headers = {
-        'X-RapidAPI-Key': 'd9f26b51c3mshe9d39ff134ec03ap10558fjsncf782f74f152',
+        'X-RapidAPI-Key': 'dc3ef64017mshecdc84b59ce0cf6p13e9c3jsn494a6d8a7970',
         'X-RapidAPI-Host': 'public-bathrooms.p.rapidapi.com',
       };
 

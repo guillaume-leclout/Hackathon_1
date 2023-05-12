@@ -6,7 +6,7 @@ import "./navbar.css";
 
 const NavBar = () => {
   return <div className="navbar">
- <div>
+ <div className='logocontainer'>
   <img className="logo" src={logo} alt={logo} />
  </div>
           </div>;
