@@ -66,6 +66,7 @@ const ToiletListFiltered = () => {
 
   return (
     <div className='filteredList'>
+      <h2>Choose your country : </h2>
       {uniqueCountries.map((country) => (
         <div
           className='country'
@@ -79,13 +80,16 @@ const ToiletListFiltered = () => {
       {selectedCountry && (
         <h2>Filtered Toilet List for {countryCodes[selectedCountry]}:</h2>
       )}
+      <div className='firstlistcontainer'>
       {filteredToiletList.map((toilet) => (
-        <div key={toilet.id} onClick={() => openModal(toilet)}>
+        <div className='firstlist ' key={toilet.id} onClick={() => openModal(toilet)}>
           <h4>{toilet.name}</h4>
           <p>{toilet.city}</p>
           <p>{toilet.street}</p>
         </div>
+
       ))}
+      </div>
       {isModalOpen && selectedToilet && (
         <div
           className='modal fade show'
