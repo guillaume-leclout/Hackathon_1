@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Map from './Map';
 import '../pages/dashboard.css';
-import './modal.css'
+import './modal.css';
 import './toiletlistfiltered.css';
 
 import { countryCodes } from './db';
@@ -65,17 +65,18 @@ const ToiletListFiltered = () => {
     : toiletListFiltered;
 
   return (
-    <div className='filteredList'>
-      {uniqueCountries.map((country) => (
-        <div
-          className='country'
-          key={country}
-          onClick={() => handleCountryFilter(country)}
-          disabled={selectedCountry === country}
-        >
-          {countryCodes[country]}
-        </div>
-      ))}
+    <div className="filteredList">
+      <div className="countries">
+        {uniqueCountries.map((country) => (
+          <div
+            className="country"
+            key={country}
+            onClick={() => handleCountryFilter(country)}
+            disabled={selectedCountry === country}>
+            {countryCodes[country]}
+          </div>
+        ))}
+      </div>
       {selectedCountry && (
         <h2>Filtered Toilet List for {countryCodes[selectedCountry]}:</h2>
       )}
@@ -88,36 +89,38 @@ const ToiletListFiltered = () => {
       ))}
       {isModalOpen && selectedToilet && (
         <div
-          className='modal fade show'
-          id='exampleModal'
-          tabIndex='-1'
-          aria-labelledby='exampleModalLabel'
-          aria-hidden='true'
-          style={{ display: isModalOpen ? 'block' : 'none' }}
-        >
-          <div className='modal-dialog'>
-            <div className='modal-content'>
-              <div className='modal-header'>
-                <h1 className='modal-title fs-5'>{selectedToilet.name}</h1>
+          className="modal fade show"
+          id="exampleModal"
+          tabIndex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+          style={{ display: isModalOpen ? 'block' : 'none' }}>
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5">{selectedToilet.name}</h1>
                 <button
-                  type='button'
-                  className='btn-close'
-                  data-bs-dismiss='modal'
-                  aria-label='Close'
-                  onClick={closeModal}
-                ></button>
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  onClick={closeModal}></button>
               </div>
               <div className="modal-body">
                 <p>{selectedToilet.city}</p>
                 <p>{selectedToilet.street}</p>
-                <Map {...selectedToilet}/>
+                <Map {...selectedToilet} />
                 <p>{selectedToilet.directions}</p>
                 <p>{selectedToilet.comment}</p>
-
               </div>
               <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={closeModal}>Close</button>
-                
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                  onClick={closeModal}>
+                  Close
+                </button>
               </div>
             </div>
           </div>

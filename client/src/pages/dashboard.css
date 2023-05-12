@@ -2,33 +2,47 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #155253;
 }
-
 :root {
   /*Color variables*/
   --text-color: #155253;
   --primary-color: #ffc93c;
-  --secondary-color: #ece6d9;
+  --secondary-color: #e5e0d4;
   /*Break point responsive*/
-  --mobile: 440px;
+  --mobile: 415px;
   --computer: 1080px;
 }
 .dashboard {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: var(--mobile);
-  height: 100vh;
+  height: 100%;
   background-color: var(--secondary-color);
 }
 .ToiletList {
   width: 95%;
 }
 
+.countries {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 .country {
+  color: var(--text-color);
+  width: 7em;
+  margin: 0.3em;
+  padding: 0.1em;
+  cursor: pointer;
   border: solid 1px;
   border-radius: 10px;
-  width: 30%;
-  margin: 0.5em;
-  cursor: pointer;
+  text-align: center;
+}
+
+.country:hover {
   background-color: var(--primary-color);
 }

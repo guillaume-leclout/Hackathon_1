@@ -1,0 +1,14 @@
+.navbar {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--mobile);
+  height: 6em;
+}
+
+.logo {
+  width: 20em;
+  justify-content: center;
+  align-items: center;
+}
