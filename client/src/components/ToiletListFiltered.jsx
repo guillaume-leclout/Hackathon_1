@@ -25,7 +25,7 @@ const ToiletListFiltered = () => {
       };
 
       const headers = {
-        'X-RapidAPI-Key': 'd9f26b51c3mshe9d39ff134ec03ap10558fjsncf782f74f152',
+        'X-RapidAPI-Key': 'dc3ef64017mshecdc84b59ce0cf6p13e9c3jsn494a6d8a7970',
         'X-RapidAPI-Host': 'public-bathrooms.p.rapidapi.com',
       };
 
@@ -66,6 +66,7 @@ const ToiletListFiltered = () => {
 
   return (
     <div className="filteredList">
+      <h2>Choose your country : </h2>
       <div className="countries">
         {uniqueCountries.map((country) => (
           <div
@@ -80,13 +81,18 @@ const ToiletListFiltered = () => {
       {selectedCountry && (
         <h2>Filtered Toilet List for {countryCodes[selectedCountry]}:</h2>
       )}
-      {filteredToiletList.map((toilet) => (
-        <div key={toilet.id} onClick={() => openModal(toilet)}>
-          <h4>{toilet.name}</h4>
-          <p>{toilet.city}</p>
-          <p>{toilet.street}</p>
-        </div>
-      ))}
+      <div className="firstlistcontainer">
+        {filteredToiletList.map((toilet) => (
+          <div
+            className="firstlist "
+            key={toilet.id}
+            onClick={() => openModal(toilet)}>
+            <h4>{toilet.name}</h4>
+            <p>{toilet.city}</p>
+            <p>{toilet.street}</p>
+          </div>
+        ))}
+      </div>
       {isModalOpen && selectedToilet && (
         <div
           className="modal fade show"
