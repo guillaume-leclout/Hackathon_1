@@ -3,7 +3,6 @@ import axios from 'axios';
 import Map from './Map';
 import '../pages/dashboard.css';
 import './modal.css';
-import './toiletlistfiltered.css';
 
 import { countryCodes } from './db';
 
@@ -66,7 +65,7 @@ const ToiletListFiltered = () => {
 
   return (
     <div className="filteredList">
-      <h2>Choose your country : </h2>
+      <h2 className="list-title">Choose your country : </h2>
       <div className="countries">
         {uniqueCountries.map((country) => (
           <div
@@ -79,7 +78,9 @@ const ToiletListFiltered = () => {
         ))}
       </div>
       {selectedCountry && (
-        <h2>Filtered Toilet List for {countryCodes[selectedCountry]}:</h2>
+        <h2 className="list-title">
+          Filtered Toilet List for {countryCodes[selectedCountry]}:
+        </h2>
       )}
       <div className="firstlistcontainer">
         {filteredToiletList.map((toilet) => (

@@ -16,15 +16,17 @@
   opacity: 0.9;
   width: var(--mobile);
   color: var(--text-color);
+  font-family: var(--first-font);
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 4em;
+  height: 4.5em;
 }
 .chuck-title {
-  padding-bottom: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 .scrolling-text {
   white-space: nowrap;

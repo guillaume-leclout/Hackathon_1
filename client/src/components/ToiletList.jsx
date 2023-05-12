@@ -3,8 +3,6 @@ import axios from 'axios';
 import Map from '../components/Map';
 import '../pages/dashboard.css';
 
-import './toiletlist.css';
-
 const ToiletList = () => {
   const [toilets, setToilets] = useState([]);
   const [currLocationJs, setCurrLocationJs] = useState({});
