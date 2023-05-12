@@ -55,7 +55,9 @@ const ToiletList = () => {
 
   return (
     <div className="ToiletList">
+      <h2>Public Toilets Around You : </h2>
       <Map {...currLocationJs} />
+      <h2>Toilet Partners : </h2>
       {toilets &&
         toilets.map((toilet) => (
           <p key={toilet.id}>
