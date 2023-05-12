@@ -6,13 +6,11 @@
   padding-bottom: 1em;
   width: var(--mobile);
 }
-
 .chuck-norris-banner {
   display: flex;
   border-radius: 15px;
   overflow: hidden;
 }
-
 .jesaispas {
   background-color: var(--primary-color);
   opacity: 0.9;
@@ -25,16 +23,13 @@
   justify-content: center;
   height: 4em;
 }
-
 .chuck-title {
   padding-bottom: 1em;
 }
-
 .scrolling-text {
   white-space: nowrap;
   animation: marquee 16s linear infinite;
 }
-
 @keyframes marquee {
   0% {
     transform: translateX(100%);
