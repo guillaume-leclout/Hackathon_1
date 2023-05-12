@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import './toiletlistfiltered.css';
 import axios from 'axios';
-import '../pages/dashboard.css'
+import Map from './Map';
+import '../pages/dashboard.css';
+import './modal.css'
+import './toiletlistfiltered.css';
 
-import {countryCodes} from './db'
+import { countryCodes } from './db';
 
 const ToiletListFiltered = () => {
   const [toiletListFiltered, setToiletListFiltered] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedToilet, setSelectedToilet] = useState(null);
 
   useEffect(() => {
     const fetchFilteredToilets = async () => {
@@ -43,16 +47,21 @@ const ToiletListFiltered = () => {
     setSelectedCountry(country);
   };
 
+  const openModal = (toilet) => {
+    setSelectedToilet(toilet);
+    setModalOpen(true);
+  };
 
+  const closeModal = () => {
+    setModalOpen(false);
+  };
 
   const uniqueCountries = Array.from(
     new Set(toiletListFiltered.map((toilet) => toilet.country))
   );
 
   const filteredToiletList = selectedCountry
-    ? toiletListFiltered.filter(
-        (toilet) => toilet.country === selectedCountry
-      )
+    ? toiletListFiltered.filter((toilet) => toilet.country === selectedCountry)
     : toiletListFiltered;
 
   return (
@@ -64,21 +73,56 @@ const ToiletListFiltered = () => {
           onClick={() => handleCountryFilter(country)}
           disabled={selectedCountry === country}
         >
-          {countryCodes[country]} 
+          {countryCodes[country]}
         </div>
       ))}
       {selectedCountry && (
-        <h2>Filtered Toilet List for {countryCodes[selectedCountry]}:</h2> 
+        <h2>Filtered Toilet List for {countryCodes[selectedCountry]}:</h2>
       )}
       {filteredToiletList.map((toilet) => (
-        <div key={toilet.id}>
+        <div key={toilet.id} onClick={() => openModal(toilet)}>
           <h4>{toilet.name}</h4>
-
-
           <p>{toilet.city}</p>
           <p>{toilet.street}</p>
         </div>
       ))}
+      {isModalOpen && selectedToilet && (
+        <div
+          className='modal fade show'
+          id='exampleModal'
+          tabIndex='-1'
+          aria-labelledby='exampleModalLabel'
+          aria-hidden='true'
+          style={{ display: isModalOpen ? 'block' : 'none' }}
+        >
+          <div className='modal-dialog'>
+            <div className='modal-content'>
+              <div className='modal-header'>
+                <h1 className='modal-title fs-5'>{selectedToilet.name}</h1>
+                <button
+                  type='button'
+                  className='btn-close'
+                  data-bs-dismiss='modal'
+                  aria-label='Close'
+                  onClick={closeModal}
+                ></button>
+              </div>
+              <div className="modal-body">
+                <p>{selectedToilet.city}</p>
+                <p>{selectedToilet.street}</p>
+                <Map {...selectedToilet}/>
+                <p>{selectedToilet.directions}</p>
+                <p>{selectedToilet.comment}</p>
+
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" onClick={closeModal}>Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
