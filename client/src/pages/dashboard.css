@@ -6,18 +6,18 @@
   :root {
     /*Color variables*/
     --text-color: #155253;
-    --primary-color: #FFC93C;
-    --secondary-color: #ECE6D9;
+    --primary-color: #ffc93c;
+    --secondary-color: #e5e0d4;
     /*Break point responsive*/
-    --mobile: 440px;
+    --mobile: 415px;
     --computer: 1080px;
   }
   .dashboard {
     display: flex;
     flex-direction: column;
     width: var(--mobile);
-    height: 100vh;
-    background-color: var(--secondary-color);
+    height: 100%;
+    background-color:var(--secondary-color);
   }
   .ToiletList {
     width: 95%;
