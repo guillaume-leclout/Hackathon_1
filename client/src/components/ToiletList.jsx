@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Map from '../components/Map';
+import '../pages/dashboard.css'
+
 import './toiletlist.css';
 
 const ToiletList = () => {
@@ -59,7 +61,10 @@ const ToiletList = () => {
           <p key={toilet.id}>
             {toilet.name} {toilet.city} {toilet.street}
           </p>
+
+
         ))}
+
     </div>
   );
 };
