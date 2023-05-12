@@ -1,9 +1,10 @@
 import React from 'react';
 import ToiletList from '../components/ToiletList';
+import '../pages/dashboard.css';
 
 const Dashboard = () => {
   return (
-    <div>
+    <div className="dashboard">
       <ToiletList />
     </div>
   );
