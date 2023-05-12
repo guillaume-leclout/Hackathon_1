@@ -1,0 +1,42 @@
+.chuck-container {
+  display: flex;
+  background-color: #fff8e6;
+  height: 5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: var(--mobile);
+}
+.chuck-norris-banner {
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.jesaispas {
+  background-color: var(--primary-color);
+  opacity: 0.9;
+  width: var(--mobile);
+  color: var(--text-color);
+  font-family: var(--first-font);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 4.5em;
+}
+.chuck-title {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.scrolling-text {
+  white-space: nowrap;
+  animation: marquee 16s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

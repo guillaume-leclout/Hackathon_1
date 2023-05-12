@@ -1,0 +1,83 @@
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+:root {
+  /*Color variables*/
+  --text-color: #155253;
+  --primary-color: #ffc93c;
+  --secondary-color: #fff8e6;
+
+  /*Break point responsive*/
+  --mobile: 415px;
+  --computer: 1080px;
+  --first-font: 'Palanquin', sans-serif;
+}
+
+.dashboard {
+  font-family: var(--first-font);
+  display: flex;
+  flex-direction: column;
+  width: var(--mobile);
+  height: 100%;
+  background-color: var(--secondary-color);
+}
+.ToiletList {
+  width: 95%;
+}
+
+.ToiletList h2 {
+  font-size: 1.1em;
+  margin-left: 0.25em;
+}
+
+.ToiletList p {
+  margin-left: 0.25em;
+}
+.firstlist {
+  display: flex;
+  height: 12em;
+  width: 8em;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: var(--primary-color);
+  opacity: 0.9;
+
+  border-radius: 10px;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.list-title {
+  font-size: 1.1em;
+  margin-left: 0.9em;
+}
+.firstlistcontainer {
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-flow: row wrap;
+  gap: 0.5em;
+}
+.countries {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.country {
+  color: var(--text-color);
+  width: 7em;
+  margin: 0.3em;
+  padding: 0.1em;
+  cursor: pointer;
+  border: solid 1px;
+  border-radius: 10px;
+  text-align: center;
+}
+.country:hover {
+  background-color: var(--primary-color);
+}
