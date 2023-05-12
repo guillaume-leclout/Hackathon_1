@@ -58,19 +58,26 @@ const ToiletListFiltered = () => {
   return (
     <div className='filteredList'>
       {uniqueCountries.map((country) => (
-        <button
+        <div
+          className='country'
           key={country}
           onClick={() => handleCountryFilter(country)}
           disabled={selectedCountry === country}
         >
           {countryCodes[country]} 
-        </button>
+        </div>
       ))}
       {selectedCountry && (
         <h2>Filtered Toilet List for {countryCodes[selectedCountry]}:</h2> 
       )}
       {filteredToiletList.map((toilet) => (
-        <p key={toilet.id}>{toilet.name} {toilet.city}</p>
+        <div key={toilet.id}>
+          <h4>{toilet.name}</h4>
+
+
+          <p>{toilet.city}</p>
+          <p>{toilet.street}</p>
+        </div>
       ))}
     </div>
   );
