@@ -23,3 +23,12 @@
 .ToiletList {
   width: 95%;
 }
+
+.country {
+  border: solid 1px;
+  border-radius: 10px;
+  width: 30%;
+  margin: 0.5em;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
